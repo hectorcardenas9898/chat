@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-aplicacion {
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.barra-lateral-usuarios {
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado-barra-lateral {
+    padding: 20px;
+    background: #93081bdd;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    font-size: 15px;
+}
+
+.lista-usuarios {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.elemento-usuario {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.elemento-usuario:hover {
+    background: #e0e0e0;
+}
+
+.contenedor-chat {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado-chat {
+    padding: 20px;
+    background: #93081bdd;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.mensajes-chat {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.mensaje {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.recibido {
+    background: #e8e8e8;
+    align-self: flex-start;
+}
+
+.enviado {
+    background: #ffdfdf;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.entrada-chat {
+    padding: 20px;
+    background: #f0f0f0;
+    display: flex;
+    gap: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+#entradaMensaje {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+#botonEnviar {
+    padding: 10px 20px;
+    background: #93081bdd;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#botonEnviar:hover {
+    background: #e40f2bdd;
+}
+
+@media (max-width: 768px) {
+    .contenedor-aplicacion {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .barra-lateral-usuarios {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .contenedor-chat {
+        height: 60vh;
+    }
+}
